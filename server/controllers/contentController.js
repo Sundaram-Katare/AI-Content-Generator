@@ -14,7 +14,7 @@ const generateContent = async (req, res) => {
     // Initialize GoogleGenAI client
     const ai = new GoogleGenAI({ apiKey: keyToUse });
 
-    const prompt = `${inputText}\n\nPlease keep your answer within 150 words.`;
+    const prompt = `${inputText}\n\nPlease keep your answer within 70 words.`;
 
 
     // Call the generateContent method
