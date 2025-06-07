@@ -70,19 +70,19 @@ function App() {
         {history.length === 0 ? (
           <p className="text-gray-500 bg-yellow-600">No previous contents found.</p>
         ) : (
-          <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="list-none p-4 bg-blue-200 border border-80 border-black text-black font-spaceGrotesk">
+          <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="list-none p-4 bg-gray-600 border border-80 border-black text-black font-spaceGrotesk">
             {history.map((item) => (
               <motion.li
                 key={item._id}
                 whileHover={{ scale: 1.05 }}
-                className="mb-4 border border-black p-4 rounded-xl hover:bg-gray-600 hover:text-white hover:rounded-xl transition-colors duration-300"
+                className="mb-4 border border-black text-white p-4 rounded-xl hover:bg-[#b0f721] hover:text-black hover:rounded-xl transition-colors duration-300"
               >
                 <strong className="block">{item.title}</strong>
                 <p>
-                  <em>Input:</em> {item.inputText}
+                  <em className="font-bold font-sans text-red-500 bg-white rounded-lg mt-4 mb-4">Input:</em><br /> {item.inputText}
                 </p>
                 <p>
-                  <em>Generated:</em> {item.generatedText}
+                  <em className="font-bold font-sans text-red-500 bg-white rounded-lg mt-4 mb-4">Generated:</em> <br /> {item.generatedText}
                 </p>
               </motion.li>
             ))}
