@@ -15,7 +15,7 @@ function Nav() {
                 <h1 className="text-White text-2xl font-semibold font-spaceGrotesk sm:text-4xl">Type<span className="text-blue-600">Craft</span></h1>
             </div>
 
-            <p className="m-5 font-spaceGrotesk font-semibold animate-bounce text-lg">You have 3 Free Trials!</p>
+            <p className="m-5 text-sm font-spaceGrotesk font-semibold animate-bounce sm:text-sm lg:text-lg">You have 3 Free Trials!</p>
 
             <div>
                 <button className="bg-[#f3f4f6] text-black px-3 py-1 border rounded-lg text-lg hover:bg-gray-500 sm:text-xl" onClick={() => window.open("https://github.com/Sundaram-Katare/AI-Content-Generator", "_blank")}>GitHub ⭐ </button>
