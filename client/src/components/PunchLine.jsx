@@ -23,9 +23,11 @@ function PunchLine() {
     const [showApiKeyPrompt, setShowApiKeyPrompt] = useState(true);
     const [tempApiKey, setTempApiKey] = useState('');
 
+    const backendUrl = "https://ai-content-generator-server-b923.onrender.com";
+
     useEffect(() => {
         axios
-            .get("http://localhost:5000/api/content")
+            .get(`${backendUrl}/api/content`)
             .then((res) => setHistory(res.data))
             .catch((err) => console.error(err));
     }, []);
@@ -44,7 +46,7 @@ function PunchLine() {
 
         setLoading(true);
         try {
-            const res = await axios.post("http://localhost:5000/api/content/generate", {
+            const res = await axios.post(`${backendUrl}/api/content/generate`, {
                 title,
                 inputText,
                 apiKey: apiKey || null,

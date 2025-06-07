@@ -18,6 +18,8 @@ function App() {
   const hasWelcomed = useRef(false);
   const hasAsked = useRef(false);
 
+  const backendUrl = 'https://ai-content-generator-server-b923.onrender.com';
+
   useEffect(() => {
     if (!hasWelcomed.current) {
       hasWelcomed.current = true;
@@ -36,7 +38,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/content")
+      .get(`${backendUrl}/api/content`)
       .then((res) => setHistory(res.data))
       .catch((err) => console.error(err));
   }, []);
