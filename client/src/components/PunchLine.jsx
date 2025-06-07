@@ -20,7 +20,7 @@ function PunchLine() {
         return localStorage.getItem('gemini_api_key') || '';
     });
 
-    const [showApiKeyPrompt, setShowApiKeyPrompt] = useState(true);
+    const [showApiKeyPrompt, setShowApiKeyPrompt] = useState(false);
     const [tempApiKey, setTempApiKey] = useState('');
 
     const backendUrl = "https://ai-content-generator-server-b923.onrender.com";

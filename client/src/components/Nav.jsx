@@ -15,7 +15,7 @@ function Nav() {
                 <h1 className="text-White text-2xl font-semibold font-spaceGrotesk sm:text-4xl">Type<span className="text-blue-600">Craft</span></h1>
             </div>
             <div>
-                <button className="bg-[#f3f4f6] text-black px-3 py-1 border rounded-lg text-lg hover:bg-gray-500 sm:text-xl">GitHub ⭐</button>
+                <button className="bg-[#f3f4f6] text-black px-3 py-1 border rounded-lg text-lg hover:bg-gray-500 sm:text-xl" onClick={() => window.open("https://github.com/Sundaram-Katare/AI-Content-Generator", "_blank")}>GitHub ⭐ </button>
             </div>
          </motion.nav>
         </>
