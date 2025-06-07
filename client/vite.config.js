@@ -7,9 +7,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5173,
-    allowedHosts: {
-      'localhost': true,
-      'https://ai-content-generator-server-b923.onrender.com': true,
-  }
+    allowedHosts: [
+      'ai-content-generator-server-b923.onrender.com'
+    ],
   },
 });
